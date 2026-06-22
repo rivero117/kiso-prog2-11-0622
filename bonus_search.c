@@ -51,7 +51,24 @@
 int main(void) {
     int answer = 737;  /* ← 好きな値に変えてよい（1〜1000） */
 
-    /* ここに実装する */
+    int guess;
+    int count = 0;
+
+    while (1) {
+        printf("予想は？");
+        scanf("%d", &guess);
+
+        count++;
+
+        if (guess > answer) {
+            printf("大きいです\n");
+        } else if (guess < answer) {
+            printf("小さいです\n");
+        } else {
+            printf("すごい。%d回であてられました！\n", count);
+            break;
+        }
+    }
 
     return 0;
 }
